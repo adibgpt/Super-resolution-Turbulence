@@ -1,0 +1,6 @@
+torch==2.0.1              # Adjust version based on compatibility with your system
+pytorch-lightning==2.0.0  # For LightningModule and Trainer
+torchvision==0.15.2       # For image transformations
+tqdm==4.65.0              # For progress bars
+pandas==1.5.3             # For data handling and CSV operations
+numpy==1.24.2             # For numerical operations
