@@ -1,7 +1,7 @@
 
 # Flow Field Prediction with PyTorch and PyTorch Lightning
 
-This repository contains a PyTorch implementation of a flow field prediction model designed for the Stanford Flame AI competition. The model uses a modified EDSR architecture with Squeeze-and-Excitation (SE) blocks to enhance feature representation. It includes scripts for training, inference, and saving/loading models.
+This repository contains a PyTorch implementation of a flow field prediction model designed for the Turbulent Super-Resolution purposes. The model uses a modified EDSR architecture with Squeeze-and-Excitation (SE) blocks to enhance feature representation. It includes scripts for training, inference, and saving/loading models.
 
 ![Flow Field Prediction](https://github.com/adibgpt/Super-resolution-Turbulence/blob/48f9ead8d55294f7d7d36cdf2dcff28fc7de72dc/2D%20Snapshot.png)
 
@@ -20,11 +20,11 @@ This repository contains a PyTorch implementation of a flow field prediction mod
 
 ## Problem Statement
 
-Participants in this Kaggle challenge will be provided with a dataset containing low-resolution 2D flowfield images. The task is to develop state-of-the-art super-resolution models capable of reconstructing high-resolution versions of these flowfields. The challenge lies in preserving the fine details and structures in the flowfields while increasing the resolution, which is critical for maintaining the accuracy of simulations and analyses.
+The problem will be provided with a dataset containing low-resolution 2D flowfield images. The task is to develop state-of-the-art super-resolution models capable of reconstructing high-resolution versions of these flowfields. The challenge lies in preserving the fine details and structures in the flowfields while increasing the resolution, which is critical for maintaining the accuracy of simulations and analyses.
 
 ## Dataset
 
-The dataset for this challenge consists of pairs of low-resolution and high-resolution 2D slices of 3D direct numerical simulation data. Each flowfield slice is represented as 4 channels (density and 3 velocity components). The dataset is divided into training and validation sets, with a separate test set used for final evaluation.
+The dataset for this problem consists of pairs of low-resolution and high-resolution 2D slices of 3D direct numerical simulation data. Each flowfield slice is represented as 4 channels (density and 3 velocity components). The dataset is divided into training and validation sets, with a separate test set used for final evaluation.
 
 ## Dataset Description
 
@@ -32,8 +32,7 @@ The dataset for this challenge consists of pairs of low-resolution and high-reso
 - **train.csv** - Contains information about the training set.
 - **val.csv** - Contains information about the validation set.
 - **test.csv** - Contains information about the test set.
-- **sample_submission.csv** - Sample submission file in the correct format, generated via linear interpolation. See `generate_submission.ipynb` in the code tab for details on how this file is created.
-- **flowfields** - Directory containing flowfield data files. See `Training_Starter_Notebook` in the code tab for details on loading flowfield data.
+- **flowfields** - Directory containing flowfield data files.
 
 ### Columns in `train.csv`, `val.csv`, and `test.csv`
 - **id** - Unique identifier for each flowfield file.
@@ -48,7 +47,7 @@ The dataset for this challenge consists of pairs of low-resolution and high-reso
 
 ## Evaluation Metric
 
-The primary evaluation metric for this challenge is Mean Squared Error (MSE) between the ground truth and the predicted high-resolution images. Additionally, private metrics such as Structural Similarity Index Measure (SSIM) of pixels and subgrid-scale stress evaluations will be used to assess the top-performing models. Participants may want to consider these metrics when tracking their model evaluation progress.
+The primary evaluation metric for this problem is Mean Squared Error (MSE) between the ground truth and the predicted high-resolution images. Additionally, further metrics such as Structural Similarity Index Measure (SSIM) of pixels and subgrid-scale stress evaluations will be provided to assess the model.
 
 ## Requirements
 
@@ -59,7 +58,7 @@ pip install -r requirements.txt
 
 ## Setup
 
-1. **Dataset**: Place your dataset in a folder named `data` in the root directory. The dataset should include:
+1. **Dataset**: Place your dataset in a folder named `Dataset` in the root directory. The dataset should include:
     - `train.csv`, `val.csv`, `test.csv` (CSV files listing the dataset files)
     - Low-resolution and high-resolution flow field data in the `flowfields/LR` and `flowfields/HR` directories, respectively.
    
@@ -121,4 +120,4 @@ The `model_utils.py` file includes helper functions:
 
 ## Acknowledgments
 
-This code was developed by Adib Bazgir and Rama Chandra Praneeth Madugula for the Stanford Flame AI competition. Future versions may include models based on FNO, GANs, and other architectures for flow field prediction.
+This code was developed by Adib Bazgir and Rama Chandra Praneeth Madugula for the Turbulent Super-Resolution problem. Future versions may include models based on FNO, GANs, and other architectures for flow field prediction.
