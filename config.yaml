@@ -1,0 +1,27 @@
+# Dataset paths
+data:
+  input_path: "./data"               # Directory containing the dataset files
+  output_path: "./outputs"           # Directory for logs, checkpoints, and predictions
+  checkpoint_dir: "./outputs/checkpoints"  # Directory to save model checkpoints
+  log_dir: "./outputs/logs"          # Directory to save logs
+
+# Training parameters
+training:
+  num_epochs: 300                    # Number of training epochs
+  batch_size: 32                     # Batch size for training and validation
+  learning_rate: 0.001               # Learning rate for the optimizer
+  device: "auto"                     # Use "auto" to automatically detect CPU or GPU
+
+# Model parameters
+model:
+  in_channels: 4                     # Number of input channels
+  factor: 2                          # Upscaling factor for the model
+  scale: 3                           # Number of scaling steps in the model
+  num_residual_blocks: 20            # Number of residual blocks in the model
+  num_filters: 64                    # Number of filters in convolutional layers
+  kernel_size: 3                     # Kernel size for convolutional layers
+
+# Evaluation
+evaluation:
+  eval_metric: "mse"                 # Primary evaluation metric
+  save_best_only: true               # Save only the best model based on validation loss
