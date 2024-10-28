@@ -3,7 +3,7 @@
 
 This repository contains a PyTorch implementation of a flow field prediction model designed for the Stanford Flame AI competition. The model uses a modified EDSR architecture with Squeeze-and-Excitation (SE) blocks to enhance feature representation. It includes scripts for training, inference, and saving/loading models.
 
-![Flow Field Prediction](2D Snapshot.png)
+![Flow Field Prediction](https://github.com/adibgpt/Super-resolution-Turbulence/blob/48f9ead8d55294f7d7d36cdf2dcff28fc7de72dc/2D%20Snapshot.png)
 
 ## Table of Contents
 - [Problem Statement](#problem-statement)
