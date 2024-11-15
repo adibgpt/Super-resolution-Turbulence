@@ -26,6 +26,8 @@ The problem will be provided with a dataset containing low-resolution 2D flowfie
 
 The dataset for this problem consists of pairs of low-resolution and high-resolution 2D slices of 3D direct numerical simulation data. Each flowfield slice is represented as 4 channels (density and 3 velocity components). The dataset is divided into training and validation sets, with a separate test set used for final evaluation.
 
+![Flow Field Prediction](https://github.com/adibgpt/Super-resolution-Turbulence/blob/6587131c8889c956165b43d4a8f7e7afe46027d3/LR.png)
+
 ## Dataset Description
 
 ### Files
